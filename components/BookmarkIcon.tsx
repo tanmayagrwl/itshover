@@ -1,0 +1,39 @@
+"use client";
+import { motion, useAnimate } from "motion/react";
+
+const BookmarkIcon = () => {
+    const [scope, animate] = useAnimate();
+
+    const hoverAnimation = async () => {
+        // Add your animations here
+    };
+
+    return (
+        <motion.div
+            ref={scope}
+            onHoverStart={hoverAnimation}
+            className="inline-flex cursor-pointer"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 48 48"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeMiterlimit="10"
+                strokeLinecap="square"
+            >
+                {/* Bookmark body */}
+                <motion.path
+                    className="bookmark-body"
+                    style={{ transformOrigin: "24px 24px" }}
+                    d="M24 34L41 44V8C41 5.23858 38.7614 3 36 3H12C9.23858 3 7 5.23858 7 8V44L24 34Z"
+                />
+            </svg>
+        </motion.div>
+    );
+};
+
+export default BookmarkIcon;
