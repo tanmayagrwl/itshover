@@ -28,18 +28,6 @@ const BrandNextjsIcon: React.FC<BrandNextjsIconProps> = ({
     },
   };
 
-  const slashVariants = {
-    initial: { pathLength: 0, opacity: 0 },
-    animate: {
-      pathLength: 1,
-      opacity: 1,
-      transition: {
-        pathLength: { duration: 1, ease: "easeOut", delay: 0.3 },
-        opacity: { duration: 0.3, delay: 0.3 },
-      },
-    },
-  };
-
   const lineVariants = {
     initial: { pathLength: 0, opacity: 0 },
     animate: {

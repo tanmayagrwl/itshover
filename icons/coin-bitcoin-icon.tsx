@@ -12,7 +12,6 @@ interface CoinBitcoinIconProps {
 const CoinBitcoinIcon: React.FC<CoinBitcoinIconProps> = ({
   size = 24,
   color = "currentColor",
-  strokeWidth = 2,
   className = "",
   animate = true,
 }) => {
