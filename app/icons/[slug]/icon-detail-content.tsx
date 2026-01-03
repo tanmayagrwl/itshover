@@ -157,7 +157,7 @@ export default function IconDetailContent({ slug }: { slug: string }) {
                 <TabsContent value="cli" className="mt-0 space-y-4">
                   <div>
                     <CodeBlock
-                      command={`${LINKS.SITE_URL}/${iconData.name}.json`}
+                      command={`${LINKS.SITE_URL}/r/${iconData.name}.json`}
                       className="w-full"
                     />
                   </div>
