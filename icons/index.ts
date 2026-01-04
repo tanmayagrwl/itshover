@@ -4,6 +4,7 @@ import AlarmClockPlusIcon from "./alarm-clock-plus-icon";
 import AlignCenterIcon from "./align-center-icon";
 import AlignVerticalSpaceAroundIcon from "./align-vertical-space-around-icon";
 import AmbulanceIcon from "./ambulance-icon";
+import AmpersandIcon from "./ampersand-icon";
 import AngryIcon from "./angry-icon";
 import AnnoyedIcon from "./annoyed-icon";
 import ArrowBackIcon from "./arrow-back-icon";
@@ -14,7 +15,10 @@ import ArrowBigRightIcon from "./arrow-big-right-icon";
 import ArrowBigRightDashIcon from "./arrow-big-right-dash-icon";
 import ArrowBigUpIcon from "./arrow-big-up-icon";
 import ArrowBigUpDashIcon from "./arrow-big-up-dash-icon";
+import ArrowBigDownIcon from "./arrow-big-down-icon";
+import ArrowBigDownDashIcon from "./arrow-big-down-dash-icon";
 import ArrowDown10Icon from "./arrow-down-1-0-icon";
+import ArrowDown01Icon from "./arrow-down-0-1-icon";
 import ArrowNarrowDownDashedIcon from "./arrow-narrow-down-dashed-icon";
 import ArrowNarrowDownIcon from "./arrow-narrow-down-icon";
 import ArrowNarrowLeftDashedIcon from "./arrow-narrow-left-dashed-icon";
@@ -34,6 +38,7 @@ import BluetoothConnectedIcon from "./bluetooth-connected-icon";
 import BookIcon from "./book-icon";
 import BookmarkIcon from "./bookmark-icon";
 import BrandGoogleIcon from "./brand-google-icon";
+import BrandNextjsIcon from "./brand-nextjs-icon";
 import BrightnessDownIcon from "./brightness-down-icon";
 import BulbSvg from "./bulb-svg";
 import CameraIcon from "./camera-icon";
@@ -50,6 +55,7 @@ import ClockIcon from "./clock-icon";
 import CodeIcon from "./code-icon";
 import CodeXmlIcon from "./code-xml-icon";
 import CoffeeIcon from "./coffee-icon";
+import CoinBitcoinIcon from "./coin-bitcoin-icon";
 import CreditCard from "./credit-card";
 import CopyIcon from "./copy-icon";
 import DiscordIcon from "./discord-icon";
@@ -230,6 +236,11 @@ const ICON_LIST: IconType[] = [
     keywords: ["angry", "mad", "emotion", "face", "emoji", "upset"],
   },
   {
+    name: "ampersand-icon",
+    icon: AmpersandIcon,
+    keywords: ["ampersand", "and", "symbol", "typography", "character"],
+  },
+  {
     name: "annoyed-icon",
     icon: AnnoyedIcon,
     keywords: [
@@ -287,9 +298,24 @@ const ICON_LIST: IconType[] = [
     keywords: ["arrow", "big", "up", "dash", "upload", "top"],
   },
   {
+    name: "arrow-big-down-icon",
+    icon: ArrowBigDownIcon,
+    keywords: ["arrow", "big", "down", "download", "bottom", "navigation"],
+  },
+  {
+    name: "arrow-big-down-dash-icon",
+    icon: ArrowBigDownDashIcon,
+    keywords: ["arrow", "big", "down", "dash", "download", "bottom"],
+  },
+  {
     name: "arrow-down-1-0-icon",
     icon: ArrowDown10Icon,
     keywords: ["arrow", "down", "sort", "descending", "number", "order"],
+  },
+  {
+    name: "arrow-down-0-1-icon",
+    icon: ArrowDown01Icon,
+    keywords: ["arrow", "down", "sort", "ascending", "number", "order"],
   },
   {
     name: "arrow-narrow-down-dashed-icon",
@@ -389,6 +415,19 @@ const ICON_LIST: IconType[] = [
     keywords: ["google", "brand", "logo", "search", "social"],
   },
   {
+    name: "brand-nextjs-icon",
+    icon: BrandNextjsIcon,
+    keywords: [
+      "nextjs",
+      "next",
+      "brand",
+      "logo",
+      "react",
+      "framework",
+      "vercel",
+    ],
+  },
+  {
     name: "brightness-down-icon",
     icon: BrightnessDownIcon,
     keywords: ["brightness", "down", "dim", "light", "sun"],
@@ -474,6 +513,19 @@ const ICON_LIST: IconType[] = [
     name: "coffee-icon",
     icon: CoffeeIcon,
     keywords: ["coffee", "cup", "drink", "cafe", "steam", "hot", "beverage"],
+  },
+  {
+    name: "coin-bitcoin-icon",
+    icon: CoinBitcoinIcon,
+    keywords: [
+      "coin",
+      "bitcoin",
+      "crypto",
+      "btc",
+      "cryptocurrency",
+      "money",
+      "digital",
+    ],
   },
   {
     name: "credit-card",

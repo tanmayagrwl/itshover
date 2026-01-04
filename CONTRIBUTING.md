@@ -249,6 +249,12 @@ Auto-generated when you run `npm run registry:build` in the next step.
 npm run registry:build
 ```
 
+This command does three things:
+
+1. **Generates `registry.json`** from `icons/index.ts` (ensures all icons are included)
+2. **Builds individual JSON files** in `public/r/` for the shadcn CLI
+3. **Formats** `registry.json` and `public/r/*.json` files
+
 Wait for it to succeed before proceeding.
 
 ### Step 4: Run All Checks
@@ -350,7 +356,7 @@ To verify icons work when installed via the shadcn CLI:
 # Run all checks before submitting
 npm run check
 
-# Verify registry builds successfully
+# Verify registry syncs successfully (generates + builds)
 npm run registry:build
 ```
 
