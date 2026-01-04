@@ -1,3 +1,4 @@
+"use client";
 import { forwardRef, useImperativeHandle, useCallback } from "react";
 import { AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
@@ -9,7 +10,13 @@ export type UserCheckIconHandle = {
 
 const UserCheckIcon = forwardRef<UserCheckIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -86,8 +93,8 @@ const UserCheckIcon = forwardRef<UserCheckIconHandle, AnimatedIconProps>(
         strokeLinecap="round"
         strokeLinejoin="round"
         className={`cursor-pointer ${className}`}
-        onHoverStart={start}
-        onHoverEnd={stop}
+        onHoverStart={disableHover ? undefined : start}
+        onHoverEnd={disableHover ? undefined : stop}
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 

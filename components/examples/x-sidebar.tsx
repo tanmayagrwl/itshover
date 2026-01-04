@@ -69,7 +69,7 @@ const SidebarItem = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Icon className="h-7 w-7" ref={ref} />
+      <Icon className="h-7 w-7" ref={ref} disableHover={isAnimated} />
       <span className="font-normal">{label}</span>
     </Link>
   );

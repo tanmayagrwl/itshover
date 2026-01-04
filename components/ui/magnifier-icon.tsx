@@ -9,7 +9,13 @@ export type MagnifierIconHandle = {
 
 const MagnifierIcon = forwardRef<MagnifierIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -50,8 +56,8 @@ const MagnifierIcon = forwardRef<MagnifierIconHandle, AnimatedIconProps>(
     return (
       <motion.svg
         ref={scope}
-        onHoverStart={handleHoverStart}
-        onHoverEnd={handleHoverEnd}
+        onHoverStart={disableHover ? undefined : handleHoverStart}
+        onHoverEnd={disableHover ? undefined : handleHoverEnd}
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}

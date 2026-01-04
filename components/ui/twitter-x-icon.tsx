@@ -9,7 +9,13 @@ export type TwitterXIconHandle = {
 
 const TwitterXIcon = forwardRef<TwitterXIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -38,8 +44,8 @@ const TwitterXIcon = forwardRef<TwitterXIconHandle, AnimatedIconProps>(
     return (
       <motion.svg
         ref={scope}
-        onHoverStart={start}
-        onHoverEnd={stop}
+        onHoverStart={disableHover ? undefined : start}
+        onHoverEnd={disableHover ? undefined : stop}
         xmlns="http://www.w3.org/2000/svg"
         width={size}
         height={size}

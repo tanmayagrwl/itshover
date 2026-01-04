@@ -9,7 +9,13 @@ export type FilledBellIconHandle = {
 
 const FilledBellIcon = forwardRef<FilledBellIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -61,8 +67,8 @@ const FilledBellIcon = forwardRef<FilledBellIconHandle, AnimatedIconProps>(
         viewBox="0 0 24 24"
         strokeWidth={strokeWidth}
         fill={color}
-        onHoverStart={start}
-        onHoverEnd={stop}
+        onHoverStart={disableHover ? undefined : start}
+        onHoverEnd={disableHover ? undefined : stop}
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
 

@@ -1,3 +1,4 @@
+"use client";
 import { forwardRef, useImperativeHandle } from "react";
 import { AnimatedIconProps } from "./types";
 import { motion, useAnimate } from "motion/react";
@@ -9,7 +10,13 @@ export type BookmarkIconHandle = {
 
 const BookmarkIcon = forwardRef<BookmarkIconHandle, AnimatedIconProps>(
   (
-    { size = 24, color = "currentColor", strokeWidth = 2, className = "" },
+    {
+      size = 24,
+      color = "currentColor",
+      strokeWidth = 2,
+      className = "",
+      disableHover = false,
+    },
     ref,
   ) => {
     const [scope, animate] = useAnimate();
@@ -60,8 +67,8 @@ const BookmarkIcon = forwardRef<BookmarkIconHandle, AnimatedIconProps>(
     return (
       <motion.div
         ref={scope}
-        onHoverStart={handleHoverStart}
-        onHoverEnd={handleHoverEnd}
+        onHoverStart={disableHover ? undefined : handleHoverStart}
+        onHoverEnd={disableHover ? undefined : handleHoverEnd}
         className={`inline-flex cursor-pointer ${className}`}
       >
         <svg

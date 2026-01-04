@@ -60,6 +60,9 @@ export const ExampleDetail = ({ example }: { example: Example }) => {
           <div className="flex items-center gap-2">
             <span className="text-xs text-zinc-400">Animation</span>
             <button
+              role="switch"
+              aria-checked={isAnimated}
+              aria-label="Toggle animation"
               onClick={() => setIsAnimated(!isAnimated)}
               className={cn(
                 "relative inline-flex h-5 w-9 items-center rounded-full transition-colors focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none",

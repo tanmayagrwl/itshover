@@ -7,6 +7,7 @@ export interface AnimatedIconProps {
   strokeWidth?: number;
   /** Additional CSS classes */
   className?: string;
+  disableHover?: boolean;
 }
 
 export interface AnimatedIconHandle {
